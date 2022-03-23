@@ -1,14 +1,10 @@
 package nyugtaprojektek;
 
 public class Nyugta1 {
-
+    
     public static void main(String[] args) {
-        System.out.println("******************");
-        System.out.println("     Nyugta 1");
-        System.out.println("******************");
-        System.out.println("Tétel 1:    350 Ft");
-        System.out.println("Tétel 2:     90 Ft");
-        System.out.println("Tétel 3:    650 Ft");
+        fej();
+        tetel();
         System.out.println("==================");
         System.out.println("Összesen:  1090 Ft");
         System.out.println("------------------");
@@ -27,6 +23,28 @@ public class Nyugta1 {
         System.out.println("******************");
         System.out.println("        CÉG");
         System.out.println("******************");
+    }
+    
+    public static void fej(){
+        jel("*",19);
+        System.out.printf("%13s\n","Nyugta 1");
+        jel("*",19);
+    }
+    
+    public static void tetel(){
+        int[] tetelek = {350,90,650};
+        
+        for (int i = 0; i < tetelek.length; i++) {
+            System.out.printf("Tétel %d: %8dFt ",i,tetelek[i]);
+            System.out.println("");
+        }
+    }
+    
+    public static void jel(String jel, int szam){
+        for (int i = 0; i < szam; i++) {
+            System.out.print(jel);
+        }
+        System.out.println("");
     }
     
 }
